@@ -45,7 +45,7 @@ namespace BLCTool
             string[] nameList = parentKey.GetSubKeyNames();
             for (int i = 0; i < nameList.Length; i++)
             {
-                RegistryKey regKey = parentKey.OpenSubKey(nameList[i]);
+                RegistryKey regKey = parentKey.OpenSubKey(nameList[i], false);
                 try
                 {
                     if (regKey.GetValue("DisplayName").ToString() == name)
